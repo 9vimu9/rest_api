@@ -34,7 +34,6 @@ $factory->define(User::class, function (Faker\Generator $faker) {
 });
 
 
-
 $factory->define(Category::class, function (Faker\Generator $faker) {
 
     return [
@@ -62,7 +61,8 @@ $factory->define(Product::class, function (Faker\Generator $faker) {
 
 
 $factory->define(Transaction::class, function (Faker\Generator $faker) {
-
+//Seller::has('products')->get()
+//sellers at least have one product
 	$seller=Seller::has('products')->get()->random();
 	$buyer=User::all()->except($seller->id)->random();// we are doing this because buyer and seller must  not be same
     return [

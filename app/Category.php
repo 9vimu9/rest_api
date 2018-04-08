@@ -8,17 +8,18 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Category extends Model
 {
-	use SoftDeletes;
+    use SoftDeletes;
 
-	protected $dates=['deleted_at'];
+    protected $dates=['deleted_at'];
 
     protected $fillable=[
-    	'name',
-    	'description'
-    ];//user form eken ewan values thama methanata danne fk wage ekak api ne daanne ewa fillable walata dane naa
+        'name',
+        'description'
+    ];
+   
 
     public function products()
     {
-    	return $this->belongsToMany(Product::class);
+        return $this->belongsToMany(Product::class);
     }
 }

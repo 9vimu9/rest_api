@@ -19,7 +19,8 @@ class BuyerCategoryController extends ApiController
      
         // return $buyer;
         $categories=$buyer->transactions()->with('product.categories')//check er diagram
-        //with thulata daanne apiproduct saha categories athra model sambanda wana aakrayata anuwa product model eke thiyenne [public function categories()] lesa ema nisa product.categories lesa yodanawa 
+
+        //with thulata daanne api product saha categories athra model sambanda wana aakrayata anuwai. product model eke thiyenne [public function categories()] lesa ema nisa product.categories lesa yodanawa 
             ->get()
             ->pluck('product.categories')//athulata athulata gihin ganna oni nisa
             ->collapse()//product saha category athara athi many to many relationshipo eka nisa mehema sidhu wenwa

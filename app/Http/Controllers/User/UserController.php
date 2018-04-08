@@ -18,7 +18,10 @@ class UserController extends ApiController
         $users=User::all();
         // return response()->json(['data'=>$users],200);
         //200-ok response
-          return $this->showAll($users);
+        return $this->showAll($users);
+
+        $users=Users::all();
+
     }
 
     /**

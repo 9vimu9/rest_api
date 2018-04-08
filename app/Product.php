@@ -17,7 +17,9 @@ class Product extends Model
     
 	const AVAILABLE_PRODUCT='available';
 	const UNAVAILABLE_PRODUCT='unavailable';
-//status kiyanne product eka avialble da unavilable da kiana eka thiyaganna eka e sadhaha constant dekak hadamu
+
+    //status kiyanne product eka avialble da unavilable da kiana eka thiyaganna eka e sadhaha constant dekak hadamu
+    
     protected $fillable=[
     	'name',
     	'description',

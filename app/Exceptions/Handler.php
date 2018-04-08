@@ -63,6 +63,8 @@ class Handler extends ExceptionHandler
             return $this->errorResponse($modelName." does not exist",404);
         }
 
+       
+
 
         if ($exception instanceof NotFoundHttpException) {
             // modelnotfound exception eka haa meka athara athi wenasa wanne NotFoundHttpException eka fire wenne api specify nokarapu route ekak request kala witai

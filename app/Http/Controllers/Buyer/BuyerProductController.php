@@ -16,7 +16,9 @@ class BuyerProductController extends ApiController
     public function index($buyerId)
     {
         $buyer=Buyer::findOrfail($buyerId);
-        $products=$buyer->transactions()->with('product')->get()
+        $products=$buyer->transactions()
+                        ->with('product')
+                        ->get()
                         ->pluck('product')
                         ;
         return $this->showAll($products);
